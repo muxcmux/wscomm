@@ -1,3 +1,7 @@
+ws_config = {
+  ip: 'localhost',
+  port: '8080'
+}
 # Initialize the websocket
 websocket = null
 
@@ -56,7 +60,7 @@ $ ->
     return false
     
   
-  websocket = new Socket "ws://192.168.1.66:8080/"
+  websocket = new Socket "ws://#{ws_config.ip}:#{ws_config.port}/"
 
   websocket.onerror = ->
     alert 'The server made a boo boo.'

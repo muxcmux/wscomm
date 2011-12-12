@@ -22,7 +22,7 @@ Although the client can be any static html/js file, this particular one is runni
 
 ## Test the demo
 
-Fire up a Google Chrome and point to http://localhost:4567 on you desktop/laptop. This creates a screen, where all connected phone clients will show up. Next, open the same URL on your phone to create a controller connection. All connected phones should be shown on all connected screens. Keep in mind that an iPhone will fire the `deviceorientation` event 50 times per second, which results in 50 requests to the server each second. Connecting a few phones to several screens can quickly screw your computer up :)
+You need to change the `ws_config` hash to meet your network configuration - `ip` should point to the websocket server ip address on you local network, so that other devices (your phone) are able to connect to it. Fire up a Google Chrome and point to http://localhost:4567 on you desktop/laptop. This creates a screen, where all connected phone clients will show up. Next, open the same URL on your phone to create a controller connection. All connected phones should be shown on all connected screens. Keep in mind that an iPhone will fire the `deviceorientation` event 50 times per second, which results in 50 requests to the server each second. Connecting a few phones to several screens can quickly screw your computer up :)
 
 ## TODO
 
