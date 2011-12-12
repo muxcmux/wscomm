@@ -1,0 +1,40 @@
+html {
+  font-family: 'Lucida Grande', sans-serif;
+  font-size: 14px;
+  color: #555;
+  background: #f0f0f0;
+  text-shadow: 0 1px 0 #fff;
+}
+#websocket-error {
+  display: none;
+}
+#desktop, #mobile {
+  display: none;
+}
+#your-code {
+  font-family: 'Monaco', 'Bitstream Vera Sans', 'Consolas', monospace;
+  color: #000;
+  font-weight: bold;
+}
+#debug {
+  margin: 20px 0;
+  padding: 10px;
+  background: #444;
+  color: #f0f0f0;
+  text-shadow: 0 1px 0 #000;
+  font-family: 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
+  height: 200px;
+  overflow: scroll;
+}
+.player {
+  width: 128px;
+  height: 128px;
+  background: url('img/html5.png');
+  background-size: 128px;
+  position: absolute;
+  z-index: 100;
+  display: none;
+  -webkit-perspective: 300;
+  -moz-perspective: 300;
+  perspective: 300;
+}
