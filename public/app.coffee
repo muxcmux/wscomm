@@ -16,8 +16,9 @@ is_mobile = ->
 
 create_new_player = (id, top, left) ->
   obj = $('<div></div>').addClass('player').attr('id', id).css
-    top: "#{top}px",
+    top: "#{top}px"
     left: "#{left}px"
+  .append($('<div></div>'))
   .appendTo($('body'))
   .fadeIn('100')
 
@@ -35,10 +36,10 @@ create_existing_players = ->
     create_new_player properties[0], properties[1], properties[2]
 
 move_player = (id, tilt_left_right, tilt_front_back, direction) ->
-  $('#' + id).css
-    '-webkit-transform': "rotate(#{tilt_left_right}deg) rotate3d(1,0,0, #{tilt_front_back*-1}deg)"
-    '-moz-transform': "rotate(#{tilt_left_right}deg)"
-    'transform': "rotate(#{tilt_left_right}deg) rotate3d(1,0,0, #{tilt_front_back*-1}deg)"
+  $('#' + id + ' div').css
+    '-webkit-transform': "rotateY(#{tilt_left_right}deg) rotate3d(1,0,0, #{tilt_front_back*-1}deg)"
+    '-moz-transform': "rotateY(#{tilt_left_right}deg)"
+    'transform': "rotateY(#{tilt_left_right}deg) rotate3d(1,0,0, #{tilt_front_back*-1}deg)"
 
 $ ->
   
@@ -105,11 +106,11 @@ $ ->
       send
         command: 'move'
         arguments: [tilt_left_right, tilt_front_back, direction]
-      $('#this_phone').css
-        '-webkit-transform': "rotate(#{tilt_left_right}deg) rotate3d(1,0,0, #{tilt_front_back*-1}deg)"
-        '-moz-transform': "rotate(#{tilt_left_right}deg)"
-        'transform': "rotate(#{tilt_left_right}deg) rotate3d(1,0,0, #{tilt_front_back*-1}deg)"
-    
+      $('#this_phone div').css
+        '-webkit-transform': "rotateY(#{tilt_left_right}deg) rotate3d(1,0,0, #{tilt_front_back*-1}deg)"
+        '-moz-transform': "rotateY(#{tilt_left_right}deg)"
+        'transform': "rotateY(#{tilt_left_right}deg) rotate3d(1,0,0, #{tilt_front_back*-1}deg)"
+        
   
 
 

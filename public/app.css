@@ -3,7 +3,7 @@ html {
   font-size: 14px;
   color: #555;
   background: #f0f0f0;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 #fff;  
 }
 #websocket-error {
   display: none;
@@ -27,14 +27,21 @@ html {
   overflow: scroll;
 }
 .player {
-  width: 128px;
-  height: 128px;
-  background: url('img/html5.png');
-  background-size: 128px;
+  -webkit-perspective: 200;
+  perspective: 200;
+  width: 134px;
+  height: 134px;
   position: absolute;
   z-index: 100;
   display: none;
-  -webkit-perspective: 300;
-  -moz-perspective: 300;
-  perspective: 300;
+  background: #ddd;
+  border: 1px solid #ccc;
+}
+.player div {
+  position: relative;
+  margin: 3px;
+  width: 128px;
+  height: 128px;
+  background: url('img/html5.png') 0 0 no-repeat;
+  background-size: 128px;
 }

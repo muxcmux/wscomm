@@ -1,5 +1,14 @@
 This is a proof-of-concept demo, which shows communication between multiple clients via WebSockets.
 
+## Requirements
+
+In order to run a fully functional demo on your computer, you will need:
+
+  * ruby 1.9 + a few gems (I'm running 1.9.3 with rvm)
+  * a webkit browser - either Chrome or Safari
+  * a webkit mobile browser - preferably iOS >= 4.2 (not tested on android webkit)
+  * a few minutes
+
 ## Install
 
 Clone this repository to your local machine
