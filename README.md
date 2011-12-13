@@ -8,7 +8,7 @@ Clone this repository to your local machine
   
 You will need a few extra gems, so go ahead and install them in one fell swoop:
 
-    gem install sinatra coffee-script em-websocket uuidtools yajl-ruby colorize
+    gem install sinatra thin coffee-script em-websocket uuidtools yajl-ruby colorize
   
 There are more dependancies, but they should be automatically resolved once you have installed all the above gems. If it barks about something not being installed, you can always `gem install` it
 
